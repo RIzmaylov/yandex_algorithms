@@ -25,9 +25,9 @@ void FlatNumber() {
     return;
   }
   int flats_in_floor = flat2 % cnt_floors_to_2 == 0 ? flat2 / cnt_floors_to_2 : flat2 / cnt_floors_to_2 + 1;
-  int cnt_floors_to_1 = flat1 / flats_in_floor + 1;
-  entrance1 = cnt_floors_to_1 / all_floors + 1;
-  floor1 = cnt_floors_to_1 % all_floors;
+  int cnt_floors_to_1 = flat1 % flats_in_floor == 0 ? flat1 / flats_in_floor : flat1 / flats_in_floor + 1;
+  entrance1 = cnt_floors_to_1 % all_floors == 0 ? cnt_floors_to_1 / all_floors : cnt_floors_to_1 / all_floors + 1;
+  floor1 = cnt_floors_to_1 <= all_floors ? cnt_floors_to_1 : cnt_floors_to_1 % all_floors;
   cout << entrance1 << ' ' << floor1 << '\n';
 }
 
