@@ -21,7 +21,7 @@ void PhoneNumber() {
   }
 }
 
-int main()
+int main_pn()
 {
   PhoneNumber();
   return 0;

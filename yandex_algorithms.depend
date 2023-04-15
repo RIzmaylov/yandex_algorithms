@@ -19,9 +19,13 @@
 	<iostream>
 	<vector>
 
-1681593982 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\phone_number.cpp
+1681594990 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\phone_number.cpp
 	<iostream>
 	<vector>
 	<algorithm>
-	<sstream>
+
+1681595114 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\rooted_equation.cpp
+	<iostream>
+	<vector>
+	<algorithm>
 
