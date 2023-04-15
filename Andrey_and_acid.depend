@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1681590236 source:c:\users\user\desktop\projectsc++\yandex_algorithms\andrey_and_acid\main.cpp
+	<iostream>
+	<vector>
+
+1681589939 source:c:\users\user\desktop\projectsc++\yandex_algorithms\andrey_and_acid\andrei_and_acid.cpp
+	<iostream>
+	<vector>
+
+1681590029 source:c:\users\user\desktop\projectsc++\yandex_algorithms\andrey_and_acid\boarding_the_plain.cpp
+	<iostream>
+	<vector>
+
+1681590138 source:c:\users\user\desktop\projectsc++\yandex_algorithms\andrey_and_acid\condition_temp.cpp
+	<iostream>
+	<vector>
+
+1681590221 source:c:\users\user\desktop\projectsc++\yandex_algorithms\andrey_and_acid\possible_triangle.cpp
+	<iostream>
+	<vector>
+
