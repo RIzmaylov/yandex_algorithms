@@ -20,7 +20,7 @@ void RootedEquation() {
   cout << (c * c - b) / a << '\n';
 }
 
-int main()
+int main_re()
 {
   RootedEquation();
   return 0;
