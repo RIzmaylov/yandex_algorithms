@@ -13,6 +13,10 @@ void RootedEquation() {
     cout << "MANY SOLUTIONS" << '\n';
     return;
   }
+  if ((c * c - b) % a != 0) {
+    cout << "NO SOLUTION" << '\n';
+    return;
+  }
   cout << (c * c - b) / a << '\n';
 }
 
