@@ -16,6 +16,7 @@ void FlatNumber() {
     return;
   }
   int cnt_floors_to_2 = floor2 + all_floors * (entrance2 - 1);
+
   if (cnt_floors_to_2 == 1 && flat2 < flat1) {
     if (all_floors == 1) {
       cout << 0 << ' ' << 1 << '\n';
@@ -41,6 +42,7 @@ void FlatNumber() {
   }
   entrance1 = max_cnt_floors_to_1 % all_floors == 0 ? max_cnt_floors_to_1 / all_floors : max_cnt_floors_to_1 / all_floors + 1;
   floor1 = max_cnt_floors_to_1 <= all_floors ? max_cnt_floors_to_1 : max_cnt_floors_to_1 % all_floors;
+  if (!floor1) floor1++;
   cout << entrance1 << ' ' << floor1 << '\n';
 }
 
