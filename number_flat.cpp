@@ -26,9 +26,11 @@ void FlatNumber() {
     return;
   }
   int max_flats_in_floor = flat2 % cnt_floors_to_2 == 0 ? flat2 / cnt_floors_to_2 : flat2 / cnt_floors_to_2 + 1;
-  int min_flats_in_floor = flat2 % (cnt_floors_to_2 - 1) == 0 ? flat2 / (cnt_floors_to_2 - 1) - 1 : flat2 / (cnt_floors_to_2 - 1);
-  int min_cnt_floors_to_1 = flat1 % max_flats_in_floor == 0 ? flat1 / max_flats_in_floor : flat1 / max_flats_in_floor + 1;
-  int max_cnt_floors_to_1 = flat1 % min_flats_in_floor == 0 ? flat1 / min_flats_in_floor : flat1 / min_flats_in_floor + 1;
+  int min_flats_in_floor;
+  if (cnt_floors_to_2 != 1) min_flats_in_floor = flat2 % (cnt_floors_to_2 - 1) == 0 ? flat2 / (cnt_floors_to_2 - 1) - 1 : flat2 / (cnt_floors_to_2 - 1);
+  else min_flats_in_floor = max_flats_in_floor;
+  int max_cnt_floors_to_1 = flat1 % max_flats_in_floor == 0 ? flat1 / max_flats_in_floor : flat1 / max_flats_in_floor + 1;
+  int min_cnt_floors_to_1 = flat1 % min_flats_in_floor == 0 ? flat1 / min_flats_in_floor : flat1 / min_flats_in_floor + 1;
   if (min_cnt_floors_to_1 != max_cnt_floors_to_1) {
     int max_entrance1 = max_cnt_floors_to_1 % all_floors == 0 ? max_cnt_floors_to_1 / all_floors : max_cnt_floors_to_1 / all_floors + 1;
     int min_entrance1 = min_cnt_floors_to_1 % all_floors == 0 ? min_cnt_floors_to_1 / all_floors : min_cnt_floors_to_1 / all_floors + 1;
@@ -41,8 +43,8 @@ void FlatNumber() {
     }
   }
   entrance1 = max_cnt_floors_to_1 % all_floors == 0 ? max_cnt_floors_to_1 / all_floors : max_cnt_floors_to_1 / all_floors + 1;
-  floor1 = max_cnt_floors_to_1 <= all_floors ? max_cnt_floors_to_1 : max_cnt_floors_to_1 % all_floors;
-  if (!floor1) floor1++;
+  floor1 = max_cnt_floors_to_1 <= all_floors ? max_cnt_floors_to_1 : max_cnt_floors_to_1 - all_floors * (entrance1 - 1);
+//  if (!floor1) floor1++;
   cout << entrance1 << ' ' << floor1 << '\n';
 }
 
