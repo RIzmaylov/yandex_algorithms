@@ -16,14 +16,14 @@ int main() {
     return 0;
   }
   if (a == 0 && b == 0) {
-    int b = f;
-    int k = - c;
+    double b = f;
+    double k = - c;
     cout << 1 << ' ' << k << ' ' << b << '\n';
     return 0;
   }
   if (c == 0 && d == 0) {
-    int b = e;
-    int k = - a;
+    double b = e;
+    double k = - a;
     cout << 1 << ' ' << k << ' ' << b << '\n';
     return 0;
   }
@@ -44,26 +44,26 @@ int main() {
     return 0;
   }
   if (b == 0 && d != 0 && a != 0) {
-    int x = e / a;
-    int y = (f - c * x) / d;
+    double x = e / a;
+    double y = (f - c * x) / d;
     cout << 2 << ' ' << x << ' ' << y << '\n';
     return 0;
   }
   if (a == 0 && b != 0 && c != 0) {
-    int y = e / b;
-    int x = (f - d * y) / c;
+    double y = e / b;
+    double x = (f - d * y) / c;
     cout << 2 << ' ' << x << ' ' << y << '\n';
     return 0;
   }
   if (c == 0 && d != 0 && a != 0) {
-    int y = f / d;
-    int x = (e - b * y) / a;
+    double y = f / d;
+    double x = (e - b * y) / a;
     cout << 2 << ' ' << x << ' ' << y << '\n';
     return 0;
   }
   if (d == 0 && c != 0 && b != 0) {
-    int x = f / c;
-    int y = (e - a * x) / b;
+    double x = f / c;
+    double y = (e - a * x) / b;
     cout << 2 << ' ' << x << ' ' << y << '\n';
     return 0;
   }
@@ -75,17 +75,17 @@ int main() {
   if (b != 0 && d != 0) {
     //y1 = k1 * x1 + m1
     //y2 = k2 * x2 + m2
-    int m1 = e / b;
-    int m2 = f / d;
-    int k1 = -a / b;
-    int k2 = -c / d;
+    double m1 = e / b;
+    double m2 = f / d;
+    double k1 = -a / b;
+    double k2 = -c / d;
     if (k1 != k2) {
       //k1 * x + m1 = k2 * x + m2;
       //k1 * x - k2 * x = m2 - m1;
       //(k1 - k2) * x = m2 - m1;
       //x = (m2 - m1) / (k1 - k2)
-      int x = (m2 - m1) / (k1 - k2);
-      int y = k1 * x + m1;
+      double x = (m2 - m1) / (k1 - k2);
+      double y = k1 * x + m1;
       cout << 2 << ' ' << x << ' ' << y << '\n';
       return 0;
     }
