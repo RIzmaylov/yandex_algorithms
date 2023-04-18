@@ -3,8 +3,9 @@
 
 using namespace std;
 
-int main() {
-  cout << setprecision(6);
+void LinearEquation() {
+  cout.setf(ios::fixed);
+  cout.precision(6);
   //ax + by = e,
   //cx + dy = f
   double a, b, c, d, e, f;
@@ -12,22 +13,22 @@ int main() {
   if (a == 0 && b == 0 && c == 0 && d == 0) {
     if (e == 0 && f == 0) {
       cout << 5 << '\n';
-      return 0;
+      return;
     }
     cout << 0 << '\n';
-    return 0;
+    return;
   }
   if (a == 0 && b == 0) {
-    double b = f;
-    double k = - c;
-    cout << 1 << ' ' << k << ' ' << b << '\n';
-    return 0;
+    double m = f / d;
+    double k = -c / d;
+    cout << 1 << ' ' << k << ' ' << m << '\n';
+    return;
   }
   if (c == 0 && d == 0) {
-    double b = e;
-    double k = - a;
-    cout << 1 << ' ' << k << ' ' << b << '\n';
-    return 0;
+    double m = e / b;
+    double k = -a / b;
+    cout << 1 << ' ' << k << ' ' << m << '\n';
+    return;
   }
   if (b == 0 && d == 0 && a != 0 && c != 0) {
     if (e / a == f / c) {
@@ -35,7 +36,7 @@ int main() {
     } else {
       cout << 0 << '\n';
     }
-    return 0;
+    return;
   }
   if (a == 0 && c == 0 && b != 0 && d != 0) {
     if (e / b == f / d) {
@@ -43,35 +44,35 @@ int main() {
     } else {
       cout << 0 << '\n';
     }
-    return 0;
+    return;
   }
   if (b == 0 && d != 0 && a != 0) {
     double x = e / a;
     double y = (f - c * x) / d;
     cout << 2 << ' ' << x << ' ' << y << '\n';
-    return 0;
+    return;
   }
   if (a == 0 && b != 0 && c != 0) {
     double y = e / b;
     double x = (f - d * y) / c;
     cout << 2 << ' ' << x << ' ' << y << '\n';
-    return 0;
+    return;
   }
   if (c == 0 && d != 0 && a != 0) {
     double y = f / d;
     double x = (e - b * y) / a;
     cout << 2 << ' ' << x << ' ' << y << '\n';
-    return 0;
+    return;
   }
   if (d == 0 && c != 0 && b != 0) {
     double x = f / c;
     double y = (e - a * x) / b;
     cout << 2 << ' ' << x << ' ' << y << '\n';
-    return 0;
+    return;
   }
   if (b == 0 && a == 0 || d == 0 && c == 0) {
     cout << 0 << '\n';
-    return 0;
+    return;
   }
 
   if (b != 0 && d != 0) {
@@ -89,16 +90,20 @@ int main() {
       double x = (m2 - m1) / (k1 - k2);
       double y = k1 * x + m1;
       cout << 2 << ' ' << x << ' ' << y << '\n';
-      return 0;
+      return;
     }
     if (k1 == k2 && m1 != m2) {
       cout << 0 << '\n';
-      return 0;
+      return;
     }
     if (k1 == k2 && m1 == m2) {
       cout << 1 << k1 << ' ' << m1 << '\n';
-      return 0;
+      return;
     }
   }
+
+}
+int main() {
+  LinearEquation();
   return 0;
 }
