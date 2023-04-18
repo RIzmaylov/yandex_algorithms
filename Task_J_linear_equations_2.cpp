@@ -1,8 +1,10 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
 int main() {
+  cout << setprecision(6);
   //ax + by = e,
   //cx + dy = f
   double a, b, c, d, e, f;
