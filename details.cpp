@@ -8,6 +8,11 @@ int main() {
 
   int left_m = N;
   int cnt_details = 0;
+
+  if (M > K || K > N) {
+    cout << cnt_details << '\n';
+    return 0;
+  }
   while (left_m >= K) {
     int cnt_blanks = left_m / K;
     int m_left_1 = left_m % K;
