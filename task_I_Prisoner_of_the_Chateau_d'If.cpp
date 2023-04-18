@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() {
+int main_9() {
   int A, B, C, D, E;
   cin >> A >> B >> C >> D >> E;
 
