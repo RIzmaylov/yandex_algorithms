@@ -22,6 +22,10 @@ void FlatNumber() {
       cout << 0 << ' ' << 1 << '\n';
       return;
     }
+    if (all_floors >= flat1 || flat1 <= all_floors * flat2) {
+      cout << 1 << ' ' << 0 << '\n';
+      return;
+    }
     cout << 0 << ' ' << 0 << '\n';
     return;
   }
@@ -35,6 +39,14 @@ void FlatNumber() {
     int max_entrance1 = max_cnt_floors_to_1 % all_floors == 0 ? max_cnt_floors_to_1 / all_floors : max_cnt_floors_to_1 / all_floors + 1;
     int min_entrance1 = min_cnt_floors_to_1 % all_floors == 0 ? min_cnt_floors_to_1 / all_floors : min_cnt_floors_to_1 / all_floors + 1;
     if (max_entrance1 != min_entrance1) {
+      int mid_flats_in_floor = (max_flats_in_floor - min_flats_in_floor) / 2 + min_flats_in_floor;
+      int mid_cnt_floors_to_1 = flat1 % mid_flats_in_floor == 0 ? flat1 / mid_flats_in_floor : flat1 / mid_flats_in_floor + 1;
+      int mid_entrance1 = mid_cnt_floors_to_1 % all_floors == 0 ? mid_cnt_floors_to_1 / all_floors : mid_cnt_floors_to_1 / all_floors + 1;
+      if (max_cnt_floors_to_1 - (max_entrance1 - 1) * all_floors  == min_cnt_floors_to_1 - (min_entrance1 - 1) * all_floors &&
+          max_cnt_floors_to_1 - (max_entrance1 - 1) * all_floors  == mid_cnt_floors_to_1 - (mid_entrance1 - 1) * all_floors) {
+        cout << 0 << ' ' << max_cnt_floors_to_1 - (max_entrance1 - 1) * all_floors << '\n';
+        return;
+      }
       cout << 0 << ' ' << 0 << '\n';
       return;
     } else {
@@ -44,12 +56,14 @@ void FlatNumber() {
   }
   entrance1 = max_cnt_floors_to_1 % all_floors == 0 ? max_cnt_floors_to_1 / all_floors : max_cnt_floors_to_1 / all_floors + 1;
   floor1 = max_cnt_floors_to_1 <= all_floors ? max_cnt_floors_to_1 : max_cnt_floors_to_1 - all_floors * (entrance1 - 1);
-//  if (!floor1) floor1++;
   cout << entrance1 << ' ' << floor1 << '\n';
 }
 
-int main()
-{
+
+int main_5() {
+while(true) {
   FlatNumber();
+
+}
   return 0;
 }

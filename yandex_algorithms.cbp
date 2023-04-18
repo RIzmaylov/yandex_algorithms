@@ -36,7 +36,9 @@
 		<Unit filename="boarding_the_plain.cpp" />
 		<Unit filename="condition_temp.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="number_flat.cpp" />
 		<Unit filename="possible_triangle.cpp" />
+		<Unit filename="rooted_equation.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
