@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {
+int main_6() {
   int lt1_a, lt1_b, lt2_a, lt2_b;
   cin >> lt1_a >> lt1_b >> lt2_a >> lt2_b;
   vector<pair<int, int>> combinations;
