@@ -169,6 +169,8 @@ void LinearEquation_v2() {
         return;
       }
     }
+    cout << 0 << endl;
+    return;
   } else {
     if (d != 0) {
       double x = (e - b * f / d) / (a - b * c / d);
@@ -184,7 +186,7 @@ void LinearEquation_v2() {
   }
 }
 
-int main() {
+int main_10() {
   LinearEquation_v2();
   return 0;
 }

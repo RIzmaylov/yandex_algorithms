@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -59,11 +60,59 @@ void FlatNumber() {
   cout << entrance1 << ' ' << floor1 << '\n';
 }
 
-
-int main_5() {
-while(true) {
-  FlatNumber();
-
+vector<int> AppsPerFloor(int all_floors, int flat2, int entrance2, int floor2) {
+  int min_bound = flat2 / (all_floors * (entrance2 - 1) + floor2);
+  int max_bound = (flat2 - 1) / (all_floors * (entrance2 - 1) + floor2 - 1);
+  vector<int> possible_flats_in_floor;
+  for (int i = min_bound; i <= max_bound; ++i) {
+    if (i != 0 && (all_floors * (entrance2 - 1) + floor2 - 1) * i + (flat2 - 1) % i == flat2 - 1) {
+      possible_flats_in_floor.push_back(i);
+    }
+  }
+  return possible_flats_in_floor;
 }
+
+pair<int ,int> FlatNumber_v2(int flat1, int all_floors, int flat2, int entrance2, int floor2) {
+  vector<int> possible_flats_in_floor;
+  if (floor2 > all_floors) return {-1, -1};
+
+  if (entrance2 == 1 && floor2 == 1) {
+    if (flat1 <= flat2) {
+      return {1, 1};
+    }
+    else {
+      for (int i = flat2; i <= flat1; ++i) {
+        possible_flats_in_floor.push_back(i);
+      }
+    }
+  }
+  else {
+    possible_flats_in_floor = AppsPerFloor(all_floors, flat2, entrance2, floor2);
+  }
+  pair<int, int> res = {-1, -1};
+  for (auto c : possible_flats_in_floor) {
+    int floor_index = ((flat1 - 1 - (flat1 - 1) % c) / c) + 1;
+
+    int floor1 = floor_index % all_floors;
+    int entrance1 = ((floor_index - floor1) / all_floors) + 1;
+
+    if (floor1 == 0) {
+      floor1 = all_floors;
+      entrance1--;
+    }
+    if (res.first == -1 && res.second == -1) res = {entrance1, floor1};
+    else {
+      if (entrance1 != res.first) res.first = 0;
+      if (floor1 != res.second) res.second = 0;
+    }
+  }
+  return res;
+}
+
+int main() {
+  int flat1, all_floors, flat2, entrance2, floor2;
+  cin >> flat1 >> all_floors >> flat2 >> entrance2 >> floor2;
+  auto res = FlatNumber_v2(flat1, all_floors, flat2, entrance2, floor2);
+  cout << res.first << ' ' << res.second << endl;
   return 0;
 }
