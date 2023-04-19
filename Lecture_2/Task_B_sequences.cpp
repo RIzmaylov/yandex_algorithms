@@ -44,7 +44,7 @@ string GetSeqAndWhatTypeOf() {
   return type_of_seq[answer];
 }
 
-int main()
+int main_B()
 {
   cout << GetSeqAndWhatTypeOf() << endl;
   return 0;
