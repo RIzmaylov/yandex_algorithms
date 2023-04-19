@@ -18,30 +18,30 @@ string GetSeqAndWhatTypeOf() {
   cin >> first;
   int x;
   bool first_flag = true;
-  string answer = type_of_seq[0];
+  int answer = 0;
   while(true) {
     cin >> x;
     if (x == -2000000000) break;
     if(first_flag) {
-      if (x > first) answer = type_of_seq[1];
-      if (x < first) answer = type_of_seq[3];
+      if (x > first) answer = 1;
+      if (x < first) answer = 3;
       first_flag = false;
     }
     if (x == first) {
-      if (answer == type_of_seq[1]) answer = type_of_seq[2];
-      if (answer == type_of_seq[3]) answer = type_of_seq[4];
+      if (answer == 1) answer = 2;
+      if (answer == 3) answer = 4;
     }
     if (x > first) {
-      if (answer == type_of_seq[0]) answer = type_of_seq[2];
-      if (answer == type_of_seq[3] || answer == type_of_seq[4]) answer = type_of_seq[5];
+      if (answer == 0) answer = 2;
+      if (answer == 3 || answer == 4) answer = 5;
     }
     if (x < first) {
-      if (answer == type_of_seq[0]) answer = type_of_seq[4];
-      if (answer == type_of_seq[1] || answer == type_of_seq[2]) answer = type_of_seq[5];
+      if (answer == 0) answer = 4;
+      if (answer == 1 || answer == 2) answer = 5;
     }
     first = x;
   }
-  return answer;
+  return type_of_seq[answer];
 }
 
 int main()
