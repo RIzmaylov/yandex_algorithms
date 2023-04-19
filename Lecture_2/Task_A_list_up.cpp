@@ -23,7 +23,7 @@ void UpList() {
   else cout << "NO" << endl;
 }
 
-int main()
+int main_A()
 {
   UpList();
   return 0;
