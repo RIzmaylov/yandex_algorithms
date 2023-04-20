@@ -14,8 +14,12 @@ size_t Competition() {
   }
   size_t Vasiliy_place = 1;
   size_t Vasiliy_index = 0;
+  int winner_id = 0;
+  for (size_t i = 1; i < results.size(); ++i) {
+    if (results[i] > results[winner_id]) winner_id = i;
+  }
   for (size_t i = 1; i < results.size() - 1; ++i) {
-    if (results[i] % 10 == 5 && results[i] > results[i + 1] && results[i - 1] >= results[i]) {
+    if (results[i] % 10 == 5 && results[i] > results[i + 1] && winner_id < i) {
       Vasiliy_index = i;
     }
   }
