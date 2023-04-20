@@ -20,18 +20,19 @@ size_t Competition() {
   }
   for (size_t i = 1; i < results.size() - 1; ++i) {
     if (results[i] % 10 == 5 && results[i] > results[i + 1] && winner_id < i) {
-      Vasiliy_index = i;
+      if (Vasiliy_index == 0 || (Vasiliy_index != 0 && results[Vasiliy_index] < results[i]))
+        Vasiliy_index = i;
     }
   }
   if (Vasiliy_index == 0) return Vasiliy_index;
   for (size_t i = 0; i < results.size(); ++i) {
-    if (i == Vasiliy_index) continue;
     if (results[i] > results[Vasiliy_index]) Vasiliy_place++;
   }
   return Vasiliy_place;
 }
 
 int main() {
+  while (true)
   cout << Competition() << endl;
   return 0;
 }
