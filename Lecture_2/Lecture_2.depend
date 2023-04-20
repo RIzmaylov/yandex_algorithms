@@ -8,15 +8,20 @@
 1681896792 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\main.cpp
 	<iostream>
 
-1681899337 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_a_list_up.cpp
+1681973484 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_a_list_up.cpp
 	<iostream>
 	<sstream>
 
-1681901643 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_b_sequences.cpp
+1681973462 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_b_sequences.cpp
 	<iostream>
 	<vector>
 
-1681901894 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_c_nearest_number.cpp
+1681973436 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_c_nearest_number.cpp
 	<iostream>
 	<vector>
+
+1681974052 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_d_neighbours.cpp
+	<iostream>
+	<vector>
+	<sstream>
 
