@@ -37,7 +37,7 @@ Answer CntToSymSeq() {
   return answ;
 }
 
-int main() {
+int main_F() {
   Answer answ = CntToSymSeq();
   cout << answ.cnt_nums << endl;
   for (int i = answ.nums.size() - 1; i >= 0; --i) {
