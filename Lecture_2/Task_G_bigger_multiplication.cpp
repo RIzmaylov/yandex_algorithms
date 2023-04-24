@@ -8,9 +8,8 @@ void ReadAndWriteSeq(vector<int>& nums) {
   string temp_s;
   getline(cin, temp_s);
   stringstream ss(temp_s);
-  while(ss) {
-    int temp;
-    ss >> temp;
+  int temp;
+  while(ss >> temp) {
     nums.push_back(temp);
   }
 }
@@ -18,9 +17,11 @@ void ReadAndWriteSeq(vector<int>& nums) {
 pair<int, int> BiggerMult() {
   vector<int> nums;
   ReadAndWriteSeq(nums);
+
   int first = nums[0], second = nums[1];
   int mult = nums[0] * nums[1];
-  for (size_t i = 0; i < nums.size() - 2; ++i) {
+
+  for (size_t i = 0; i < nums.size() - 1; ++i) {
     for (size_t j = i + 1; j < nums.size(); ++j) {
       if ((nums[i] * nums[j]) > mult) {
         first = nums[i];
