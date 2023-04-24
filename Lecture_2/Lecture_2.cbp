@@ -33,6 +33,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Task_A_list_up.cpp" />
+		<Unit filename="Task_B_sequences.cpp" />
+		<Unit filename="Task_C_nearest_number.cpp" />
+		<Unit filename="Task_D_neighbours.cpp" />
+		<Unit filename="Task_E_cow_shit.cpp" />
+		<Unit filename="Task_F_sym_seq.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

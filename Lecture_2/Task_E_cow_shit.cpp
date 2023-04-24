@@ -31,8 +31,7 @@ size_t Competition() {
   return Vasiliy_place;
 }
 
-int main() {
-  while (true)
+int main_E() {
   cout << Competition() << endl;
   return 0;
 }
