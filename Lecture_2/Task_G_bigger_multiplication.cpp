@@ -21,9 +21,19 @@ pair<int, int> BiggerMult2() {
   if (nums.size() == 2) {
     return nums[0] < nums[1] ? make_pair(nums[0], nums[1]) : make_pair(nums[1], nums[0]);
   }
-  int first_pos_max = 0, second_pos_max = 0, first_neg_max = 0, second_neg_max = 0;
+  int first_pos_max, second_pos_max, first_neg_max, second_neg_max;
+  if (nums[0] > nums[1]) {
+    first_pos_max = nums[0];
+    second_pos_max = nums[1];
+  }
+  else {
 
-  for (size_t i = 0; i < nums.size(); ++i) {
+    first_pos_max = nums[1];
+    second_pos_max = nums[0];
+  }
+  first_neg_max = second_pos_max;
+  second_neg_max = first_pos_max;
+  for (size_t i = 2; i < nums.size(); ++i) {
     if (nums[i] > 0) {
       if (nums[i] > first_pos_max) {
         second_pos_max = first_pos_max;
@@ -45,10 +55,9 @@ pair<int, int> BiggerMult2() {
   int pos_prod = first_pos_max * second_pos_max;
   int neg_prod = first_neg_max * second_neg_max;
   if (pos_prod > neg_prod) {
-    return first_pos_max < second_pos_max ? make_pair(first_pos_max, second_pos_max) : make_pair(second_pos_max, first_pos_max);
+    return make_pair(second_pos_max, first_pos_max);
   } else {
-
-    return first_neg_max < second_neg_max ? make_pair(first_neg_max, second_neg_max) : make_pair(second_neg_max, first_neg_max);
+    return make_pair(first_neg_max, second_neg_max);
   }
 }
 
