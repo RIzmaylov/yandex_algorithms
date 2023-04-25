@@ -25,14 +25,20 @@ pair<int, int> BiggerMult2() {
 
   for (size_t i = 0; i < nums.size(); ++i) {
     if (nums[i] > 0) {
-      if (nums[i] >= first_pos_max) {
+      if (nums[i] > first_pos_max) {
         second_pos_max = first_pos_max;
         first_pos_max = nums[i];
       }
+      else if (nums[i] > second_pos_max) {
+        second_pos_max = nums[i];
+      }
     } else {
-      if (nums[i] <= first_neg_max) {
+      if (nums[i] < first_neg_max) {
         second_neg_max = first_neg_max;
         first_neg_max = nums[i];
+      }
+      else if (nums[i] < second_neg_max) {
+        second_neg_max = nums[i];
       }
     }
   }
