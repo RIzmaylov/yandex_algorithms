@@ -42,7 +42,12 @@
 	<iostream>
 	<vector>
 
-1682500926 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_i_sapper.cpp
+1682504000 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_i_sapper.cpp
 	<iostream>
 	<vector>
+
+1682506639 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_j_maxims_triangle.cpp
+	<iostream>
+	<vector>
+	<iomanip>
 
