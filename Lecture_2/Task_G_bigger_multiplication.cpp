@@ -54,7 +54,7 @@ void BiggerMult2(int64_t& num1, int64_t& num2) {
   }
 }
 
-int main() {
+int main_G() {
   int64_t num1, num2;
   BiggerMult2(num1, num2);
   cout << num1 << ' ' << num2 << endl;

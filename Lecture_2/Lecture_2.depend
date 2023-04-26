@@ -33,7 +33,12 @@
 	<iostream>
 	<vector>
 
-1682496777 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_g_bigger_multiplication.cpp
+1682497563 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_g_bigger_multiplication.cpp
+	<iostream>
+	<sstream>
+	<vector>
+
+1682497713 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_2\task_h_bigger_multiplication_by_3_nums.cpp
 	<iostream>
 	<sstream>
 	<vector>
