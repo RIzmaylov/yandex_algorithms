@@ -5,7 +5,7 @@
 using namespace std;
 
 
-int main()
+int main_B()
 {
   set<int> set1, set2;
   string s1, s2;
