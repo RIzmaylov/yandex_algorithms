@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Lecture_2" />
+		<Option title="Lecture_3" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Lecture_2" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Lecture_3" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Lecture_2" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Lecture_3" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -32,16 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Task_A_list_up.cpp" />
-		<Unit filename="Task_B_sequences.cpp" />
-		<Unit filename="Task_C_nearest_number.cpp" />
-		<Unit filename="Task_D_neighbours.cpp" />
-		<Unit filename="Task_E_cow_shit.cpp" />
-		<Unit filename="Task_F_sym_seq.cpp" />
-		<Unit filename="Task_G_bigger_multiplication.cpp" />
-		<Unit filename="Task_H_bigger_multiplication_by_3_nums.cpp" />
-		<Unit filename="Task_I_sapper.cpp" />
-		<Unit filename="Task_J_Maxims_triangle.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

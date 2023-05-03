@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1683113451 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_3\main.cpp
+	<iostream>
+
+1683113630 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_3\task_a_cnt_diff_numbers.cpp
+	<iostream>
+	<set>
+
