@@ -11,7 +11,12 @@
 	<sstream>
 	<set>
 
-1683116567 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_3\task_c_cubes.cpp
+1683117066 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_3\task_c_cubes.cpp
 	<iostream>
 	<set>
+
+1683117693 source:c:\users\user\desktop\projectsc++\yandex_algorithms\yandex_algorithms\lecture_3\task_d_cnt_words.cpp
+	<iostream>
+	<set>
+	<string>
 
