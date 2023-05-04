@@ -3,21 +3,26 @@
 
 using namespace std;
 
-int UFO_Genom()
+size_t UFO_Genom()
 {
   string frst_gen, scnd_gen;
   cin >> frst_gen >> scnd_gen;
-  multiset<int> collection_1;
-  int res = 0;
-  for (int c = 0; c < frst_gen.size() - 1; ++c)
+  multiset<string> collection_1;
+  size_t res = 0;
+  for (size_t c = 0; c < scnd_gen.size() - 1; ++c)
   {
-    int temp = frst_gen[c] * 100 + frst_gen[c + 1];
+    string temp = "";
+    temp += scnd_gen[c];
+    temp += scnd_gen[c + 1];
     collection_1.insert(temp);
   }
-  for (int c = 0; c < scnd_gen.size() - 1; ++c)
+  for (size_t c = 0; c < frst_gen.size() - 1; ++c)
   {
-    int temp = scnd_gen[c] * 100 + scnd_gen[c + 1];
-    res += collection_1.count(temp);
+    string temp = "";
+    temp += frst_gen[c];
+    temp += frst_gen[c + 1];
+//    res += collection_1.count(temp);
+  if (collection_1.find(temp) != collection_1.end()) res++;
   }
   return res;
 }
