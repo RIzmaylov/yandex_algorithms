@@ -25,7 +25,7 @@ int OpenCalculator()
   return nums.size() - old_size;
 }
 
-int main()
+int main_E()
 {
   cout << OpenCalculator() << endl;
   return 0;
