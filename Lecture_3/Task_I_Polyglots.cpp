@@ -21,12 +21,13 @@ void Polyglots()
     }
     all_langs.merge(langs);
     if (langs.size())
-    {
       main_langs = langs;
-    }
     else
     {
-      main_langs.clear();
+      if (i == 0)
+        main_langs = all_langs;
+      else
+        main_langs.clear();
     }
   }
   cout << main_langs.size() << endl;
