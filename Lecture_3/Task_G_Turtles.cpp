@@ -14,9 +14,7 @@ int Turtles()
   {
     int a, b;
     cin >> a >> b;
-    if (a + b == N - 1 &&
-        behind.find(a) == behind.end() &&
-        in_front.find(b) == in_front.end())
+    if (a >= 0 && b >= 0 && a + b == N - 1 && behind.find(a) == behind.end() && in_front.find(b) == in_front.end())
     {
       ++res;
       behind.insert(a);
